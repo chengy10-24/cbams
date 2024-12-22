@@ -39,7 +39,7 @@ body {
 }
 
 .table-container {
-    margin-top: 35px;
+    margin-top: 9px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -84,7 +84,7 @@ tr:hover {
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 85%;
+    margin-left: 83%;
 }
 
 button {

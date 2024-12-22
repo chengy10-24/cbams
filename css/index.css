@@ -55,19 +55,21 @@ body {
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 85%;
+    margin-left: 83%;
 }
 
 .container {
+    margin-top: 8px;
     display: flex;
     height: 100%;
-    margin-top: 35px;
 }
 
-.left {
+.left,
+.right {
     width: 50%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: hidden;
 }
 
 .flow-chart {
@@ -76,9 +78,7 @@ body {
 }
 
 .right {
-    width: 50%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size:12.3px;
 }
 
 .footer {

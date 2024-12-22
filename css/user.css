@@ -40,7 +40,6 @@ body {
 
 .main-content {
     margin-left: 200px;
-    padding: 20px;
 }
 
 .navbar {
@@ -130,7 +129,7 @@ img {
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 355px;
+    margin-left: 35px;
 }
 
 .table-container {
