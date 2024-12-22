@@ -71,8 +71,8 @@ function toggleSubMenus(visible, subMenus, row) {
 
 function logout() {
     if (confirm('确定要退出登录吗？')) {
-        sessionStorage.removeItem("token");
-        localStorage.removeItem("token");
+        sessionStorage.removeItem("username");
+        localStorage.removeItem("username");
         window.location.href = "login.html";
     }
 }
