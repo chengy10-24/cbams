@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单管理</title>
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="cbams">
+            <span>通用后台权限系统</span>
+        </div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="role.html">角色管理</a></li>
+            <li><a href="menu.html">菜单管理</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <nav class="navbar">
+            <span id="login-user"></span>
+            <img class="avatar"
+                src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80"
+                onclick="logout()">
+        </nav>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>状态</th>
+                    <th>权限标识</th>
+                    <th>请求路径</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>用户管理</td>
+                    <td>菜单</td>
+                    <td>显示</td>
+                    <td>cbams:user:list</td>
+                    <td>/user.html</td>
+                    <td><button onclick="showOrHideSubMenu(0, this.parentNode.parentNode)">+</button></td>
+                </tr>
+                <tr>
+                    <td>角色管理</td>
+                    <td>菜单</td>
+                    <td>显示</td>
+                    <td>cbams:role:list</td>
+                    <td>/role.html</td>
+                    <td><button onclick="showOrHideSubMenu(1, this.parentNode.parentNode)">+</button></td>
+                </tr>
+                <tr>
+                    <td>菜单管理</td>
+                    <td>菜单</td>
+                    <td>显示</td>
+                    <td>cbams:menu:list</td>
+                    <td>/menu.html</td>
+                    <td><button onclick="showOrHideSubMenu(2, this.parentNode.parentNode)">+</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/menu.js"></script>
+
+</html>

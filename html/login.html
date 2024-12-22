@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用后台权限管理系统</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>用户登录</h2>
+        <form>
+            <div class="form-group">
+                <span class="icon">👤</span>
+                <input id="username" type="text" placeholder="请输入用户名" required>
+            </div>
+            <div class="form-group">
+                <span class="icon">🔒</span>
+                <input id="password" type="password" placeholder="请输入密码" required>
+            </div>
+            <div class="form-group captcha">
+                <span class="icon">🛡️</span>
+                <input id="captcha" type="text" placeholder="请输入验证码" required>
+                <input type="text" onclick="genCaptcha()">
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">记住我</label>
+            </div>
+            <input type="button" class="submit-btn" value="登录" onclick="login()">
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/login.js"></script>
+
+</html>

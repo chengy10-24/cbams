@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="cbams">
+            <span>通用后台权限系统</span>
+        </div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="role.html">角色管理</a></li>
+            <li><a href="menu.html">菜单管理</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <nav class="navbar">
+            <span id="login-user"></span>
+            <img class="avatar"
+                src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80"
+                onclick="logout()">
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="left"><img class="flow-chart" src="../images/cbams-flow-chart.png" alt=""></div>
+        <div class="right">
+            <h2>RBAC是什么？</h2>
+            <p>
+                Role-Based Access Control，中文意思是：基于角色（Role）的访问控制。这是一种广泛应用于计算机系统和网络安全领域的访问控制模型。
+            </p>
+            <p>
+                简单来说，就是通过将权限分配给角色，再将角色分配给用户，来实现对系统资源的访问控制。一个用户拥有若干角色，每一个角色拥有若干权限。这样，就构造成“用户-角色-权限”的授权模型。在这种模型中，用户与角色之间，角色与权限之间，通常是多对多的关系。
+            </p>
+            <h3>RBAC模型的核心概念：</h3>
+            <ul>
+                <li><strong>角色（Role）：</strong> 角色是指在系统中具有一组相关权限的抽象概念，代表了用户在特定上下文中的身份或职能，例如管理员、普通用户等。</li>
+                <li><strong>权限（Permission）：</strong> 权限是指对系统资源进行操作的许可，如读取、写入、修改等。权限可以被分配给角色。</li>
+                <li><strong>用户（User）：</strong> 用户是指系统的实际使用者，每个用户可以被分配一个或多个角色。</li>
+                <li><strong>分配（Assignment）：</strong> 分配是指将角色与用户关联起来，以赋予用户相应的权限。</li>
+            </ul>
+            <p>
+                RBAC 认为授权实际上是 Who、What、How 三元组之间的关系，也就是 Who 对 What 进行 How 的操作，即“主体”对“客体”的操作。
+            </p>
+            <ul>
+                <li><strong>Who：</strong> 是权限的拥有者或主体（如：User，Role）。</li>
+                <li><strong>What：</strong> 是操作或对象（operation，object）。</li>
+                <li><strong>How：</strong> 具体的权限（Privilege，正向授权与负向授权）。</li>
+            </ul>
+            <p>
+                通过 RBAC 模型，可以实现灵活且易于管理的访问控制策略。管理员可以通过分配和调整角色，来管理用户的权限。这种角色层次结构可以帮助简化权限管理，并确保用户只有所需的权限。
+            </p>
+            <p>
+                RBAC 模型广泛应用于系统安全、数据库管理、网络管理等领域，它提供了一种可扩展、可管理的访问控制机制，有助于保护系统资源免受未经授权的访问和潜在的安全威胁。
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

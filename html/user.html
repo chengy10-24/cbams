@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="cbams">
+            <span>通用后台权限系统</span>
+        </div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="role.html">角色管理</a></li>
+            <li><a href="menu.html">菜单管理</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <input id="username" type="text" placeholder="请输入用户名">
+            <input id="name" type="text" placeholder="请输入姓名">
+            <select id="status">
+                <option>启用</option>
+                <option>禁用</option>
+            </select>
+            <button class="search-btn" onclick="search()">搜索</button>
+            <button class="reset-btn" onclick="reset()">重置</button>
+            <button class="add-btn" onclick="add()">新增</button>
+            <button class="export-btn" onclick="exportUser()">导出</button>
+            <img src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80"
+                onclick="logout()">
+        </nav>
+
+        <div class="table-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>姓名</th>
+                        <th>部门</th>
+                        <th>岗位</th>
+                        <th>手机号</th>
+                        <th>状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddUserModal()">&times;</span>
+            <h2>新增用户</h2>
+            <form>
+                <label for="username">用户名:</label>
+                <input type="text" id="addUsername" name="username">
+                <br>
+                <label for="name">姓名:</label>
+                <input type="text" id="addName" name="name">
+                <br>
+                <label for="department">部门:</label>
+                <input type="text" id="addDepartment" name="department">
+                <br>
+                <label for="position">岗位:</label>
+                <input type="text" id="addPosition" name="position">
+                <br>
+                <label for="phone">手机号:</label>
+                <input type="text" id="addPhone" name="phone">
+                <br>
+                <label for="role">角色:</label>
+                <select id="addRole" name="role">
+                    <option value="管理员">管理员</option>
+                    <option value="普通用户">普通用户</option>
+                </select>
+                <br>
+                <label for="status">状态:</label>
+                <select id="addStatus" name="status">
+                    <option value="启用">启用</option>
+                    <option value="禁用">禁用</option>
+                </select>
+                <br>
+                <button type="button" onclick="addUser()">提交</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditUserModal()">&times;</span>
+            <h2>修改用户</h2>
+            <form>
+                <label for="username">用户名:</label>
+                <input type="text" disabled id="editUsername" name="username">
+                <br>
+                <label for="name">姓名:</label>
+                <input type="text" id="editName" name="name">
+                <br>
+                <label for="department">部门:</label>
+                <input type="text" id="editDepartment" name="department">
+                <br>
+                <label for="position">岗位:</label>
+                <input type="text" id="editPosition" name="position">
+                <br>
+                <label for="phone">手机号:</label>
+                <input type="text" id="editPhone" name="phone">
+                <br>
+                <label for="role">角色:</label>
+                <select id="editRole" name="role">
+                    <option value="管理员">管理员</option>
+                    <option value="普通用户">普通用户</option>
+                </select>
+                <br>
+                <label for="status">状态:</label>
+                <select id="editStatus" name="status">
+                    <option value="启用">启用</option>
+                    <option value="禁用">禁用</option>
+                </select>
+                <br>
+                <button type="button" onclick="updateUser()">提交</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/user.js"></script>
+
+</html>
