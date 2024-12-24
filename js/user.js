@@ -1,11 +1,10 @@
 const username = sessionStorage.getItem("username") || localStorage.getItem("username");
 
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     if (!username) {
         alert("暂未登录，请先登录！");
         window.location.href = "login.html";
-    }
-    else if (username !== "admin") {
+    } else if (username !== "admin") {
         document.querySelector(".sidebar ul li:nth-child(3)").style.display = "none";
         document.querySelector(".sidebar ul li:nth-child(4)").style.display = "none";
         document.querySelector(".add-btn").style.display = "none";
@@ -13,10 +12,9 @@ window.onload = () => {
         setTableData(users, false);
         document.querySelector(".edit-btn").style.display = "none";
         document.querySelector(".delete-btn").style.display = "none";
-    }
-    else
+    } else
         setTableData(users, false);
-}
+})
 
 const users = [
     { username: 'qinky', name: '秦开源', department: '开发部门', position: '项目经理', phone: '15735674776', role: "管理员", status: '启用', createdAt: '2023-06-25 12:00:00' },
