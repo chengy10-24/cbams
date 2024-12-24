@@ -1,4 +1,4 @@
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     const username = sessionStorage.getItem("username") || localStorage.getItem("username");
     if (!username) {
         alert("暂未登录，请先登录！");
@@ -8,7 +8,7 @@ window.onload = () => {
         document.querySelector(".sidebar ul li:nth-child(4)").style.display = "none";
     }
     document.getElementById("login-user").innerHTML = `欢迎您，${username}`;
-}
+})
 
 function logout() {
     if (confirm('确定要退出登录吗？')) {
