@@ -1,15 +1,15 @@
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     const username = sessionStorage.getItem("username") || localStorage.getItem("username");
     if (!username) {
         alert("暂未登录，请先登录！");
         window.location.href = "login.html";
-    } else if (username !== "admin") {
+    } else if (username != "admin") {
         alert("无权限访问该页面！");
         window.history.go(-1);
     } else {
         document.getElementById("login-user").innerHTML = `欢迎您，${username}`;
     }
-}
+})
 
 function detail() {
     const currentRow = event.target.parentNode.parentNode;
